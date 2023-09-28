@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
   <title>Frontend Mentor | Calculator app</title>
   <style>
     .attribution {
@@ -21,6 +22,42 @@
 </head>
 
 <body>
+  <header class="header">
+    <h1>calc</h1>
+    <p>THEME</p>
+    <!-- ! TOGGLE SWITCH -->
+    <div class="toggle-switch">
+      <label for="switch"><span>1</span><span>2</span><span>3</span></label>
+      <input type="range" min="1" max="3" value="1">
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <div class="output">
+      <p>399988854</p>
+    </div>
+    <div class="input">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="del">DEL</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>+</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+      <button>.</button>
+      <button>0</button>
+      <button>/</button>
+      <button>x</button>
+      <button class="reset">RESET</button>
+      <button class="equal">=</button>
+    </div>
+  </main>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
