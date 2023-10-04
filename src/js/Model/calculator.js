@@ -29,7 +29,11 @@ class Calculator {
 
       default:
         if (isNaN(inputVal) && this.number !== '' && inputVal !== '.') {
-          this.outputArray.push(`${this.number}`);
+          this.outputArray.push(
+            `${
+              this.number[this.number.length - 1] === '.' ? this.number.slice(0, -1) : this.number
+            }`
+          );
           this.outputArray.push(` ${inputVal} `);
 
           this.number = '';
@@ -42,7 +46,7 @@ class Calculator {
         }
 
         this.number += `${!isNaN(inputVal) ? inputVal : ''}`;
-        this.output.innerText = this.number;
+        this.output.innerText += `${!isNaN(inputVal) ? inputVal : ''}`;
 
         break;
     }
