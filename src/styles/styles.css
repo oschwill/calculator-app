@@ -110,6 +110,9 @@ body {
   border-radius: 10px;
   text-align: right;
   margin-bottom: 20px;
+  height: 70px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .input {

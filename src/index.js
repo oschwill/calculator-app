@@ -13,12 +13,8 @@ import Calculator from './js/Model/calculator';
 // CSS
 import './styles/styles.css';
 
-/* CONTAINER */
-let elements = null;
-const buttons = document.querySelector('button');
-
 /* PROPERTIES */
-let calc;
+let calc, buttons, elements;
 
 const buildSite = () => {
   renderHeader();
@@ -32,6 +28,10 @@ const buildSite = () => {
 
   // init Calculator Functionality
   calc = new Calculator(elements);
+
+  // create for all Buttons an array for event
+  buttons = Array.from(elements.calcButtons);
+  buttons.push(elements.resetButton, elements.equalButton, elements.delButton);
 };
 
 /* RUN SITE */
@@ -42,9 +42,10 @@ elements.toggleColor.addEventListener('change', (e) =>
   setTheme(elements, Number(elements.toggleColor.value))
 );
 
-elements.calcButtons.forEach((b) => {
+buttons.forEach((b) => {
   b.addEventListener('click', (e) => {
     let bVal = b.innerText;
-    console.log(b);
+    // Show / Delete in Calc Output
+    calc.showInput(bVal);
   });
 });
