@@ -5,6 +5,7 @@
 
 :root {
   --thumbColor: white;
+  --hoverButtonColor: yellow;
 }
 
 * {
@@ -139,4 +140,64 @@ body {
 
 .equal {
   grid-column: 3/-1;
+}
+
+@media (max-width: 1200px) {
+  .header,
+  .wrapper {
+    margin: 0 28vw;
+  }
+
+  .wrapper {
+    margin-top: 3vh;
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header,
+  .wrapper {
+    margin: 0 20vw;
+  }
+
+  .wrapper {
+    margin-top: 2vh;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .input button {
+    border-radius: 10px;
+    font-size: 2.8rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header,
+  .wrapper {
+    margin: 0 5vw;
+  }
+
+  .wrapper {
+    margin-top: 2vh;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+
+  .input button {
+    border-radius: 10px;
+    font-size: 2.8rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    height: 75px;
+  }
 }

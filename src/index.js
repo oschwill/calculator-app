@@ -45,6 +45,10 @@ elements.toggleColor.addEventListener('change', (e) =>
 buttons.forEach((b) => {
   b.addEventListener('click', (e) => {
     let bVal = b.innerText;
+    // change multiplier
+    if (bVal === 'x') {
+      bVal = '*';
+    }
     // Show / Delete in Calc Output
     calc.showInput(bVal);
   });
